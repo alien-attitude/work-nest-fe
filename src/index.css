@@ -1,0 +1,77 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+:root {
+  --navy: #1B2A4E;
+  --navy-deep: #0F1B36;
+  --gold: #C9A24B;
+  --gold-bright: #E0B86A;
+  --cream: #FAF8F4;
+}
+html, body, #root {
+  background-color: var(--cream);
+  color: #1B2A4E;
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  font-feature-settings: 'cv11', 'ss01', 'ss03';
+}
+::selection {
+  background-color: rgba(201, 162, 75, 0.25);
+  color: #0F1B36;
+}
+.font-display {
+  font-family: 'Plus Jakarta Sans', 'Inter', ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.03em;
+}
+.gold-text-gradient {
+  background: linear-gradient(135deg, #E0B86A 0%, #C9A24B 60%, #B08A3A 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.navy-text-gradient {
+  background: linear-gradient(135deg, #1B2A4E 0%, #27355A 60%, #0F1B36 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+/* Subtle grid + dot pattern utilities */
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(27, 42, 78, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(rgba(27, 42, 78, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(27, 42, 78, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+.bg-grid-pattern-dark {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+/* Marquee mask */
+.mask-fade-x {
+  mask-image: linear-gradient(90deg, transparent, black 12%, black 88%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 12%, black 88%, transparent);
+}
+/* Focus ring */
+*:focus-visible {
+  outline: 2px solid #C9A24B;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
